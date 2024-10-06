@@ -3,7 +3,7 @@
     <section class="principal-notes py-16 overflow-hidden">
       <div class="container mx-auto px-4">
         <div class="flex flex-col lg:flex-row bg-white rounded-lg overflow-hidden border-2 border-custom-maroon">
-          <div class="lg:w-1/2 self-stretch">
+          <div class="lg:w-1/2">
             <img src="/sharath.webp" alt="Principal Dr. Sharath" class="w-full h-full object-cover object-center" />
           </div>
           <div class="lg:w-1/2 p-6 lg:p-8 bg-white">

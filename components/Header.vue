@@ -1,6 +1,6 @@
 <!-- components/Header.vue -->
 <template>
-  <header class="shadow-md">
+  <header class="shadow-md relative">
     <!-- Top row -->
     <div class="bg-custom-maroon text-white">
       <div class="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -16,27 +16,46 @@
       </div>
     </div>
     
-    <!-- Big Menu -->
-    <BigMenu />
+    <!-- Big Menu (hidden on mobile) -->
+    <div class="hidden md:block">
+      <BigMenu />
+    </div>
+
+    <!-- Mobile menu backdrop -->
+    <div v-if="isMobileMenuOpen" class="fixed inset-0 bg-black bg-opacity-50 z-40" @click="closeMobileMenu"></div>
 
     <!-- Mobile menu (hidden on larger screens) -->
-    <div v-show="isMobileMenuOpen" class="md:hidden bg-white border-b border-gray-200">
-      <!-- Add mobile menu content here -->
-    </div>
+    <Transition name="slide-fade">
+      <MobileMenu v-if="isMobileMenuOpen" @close-menu="closeMobileMenu" class="fixed top-0 right-0 h-full w-64 bg-white z-50" />
+    </Transition>
   </header>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import BigMenu from './BigMenu.vue'
+import MobileMenu from './MobileMenu.vue'
 
 const isMobileMenuOpen = ref(false)
 
 const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value
 }
+
+const closeMobileMenu = () => {
+  isMobileMenuOpen.value = false
+}
 </script>
 
 <style scoped>
-/* Add any additional styles here */
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
+}
 </style>

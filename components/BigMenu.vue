@@ -15,7 +15,7 @@
               <div class="flex justify-center">
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl">
                   <div v-for="(column, index) in item.submenu" :key="index" class="px-4">
-                    <h3 class="font-bold text-lg mb-3 text-black uppercase">{{ column.heading }}</h3>
+                    <h3 class="font-semibold text-lg mb-3 text-black uppercase">{{ column.heading }}</h3>
                     <ul class="text-left">
                       <li v-for="subItem in column.items" :key="subItem.name" class="mb-2">
                         <a :href="subItem.path" class="text-custom-maroon hover:underline text-lg font-normal">{{ subItem.name }}</a>

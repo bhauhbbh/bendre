@@ -1,6 +1,6 @@
 <!-- components/MissionVision.vue -->
 <template>
-    <section class="bg-gray-100 py-16">
+    <section class="bg-gray-100">
       <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row justify-between items-stretch">
           <div class="w-full md:w-1/2 bg-white p-8 rounded-lg mb-8 md:mb-0 md:mr-4">

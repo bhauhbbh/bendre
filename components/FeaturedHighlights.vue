@@ -29,19 +29,19 @@
     },
     {
       title: "Disability Employment Awareness Month",
-      description: "Join us in celebrating diversity and inclusion in the workplace Friday at 7 PM",
+      description: "Explore the vibrant life at Bendre PU College through our photo gallery",
       image: "/highlight.jpeg",
       link: "/events/disability-awareness"
     },
     {
       title: "Student Radio Show",
-      description: "Tune in to our weekly student-run radio show every Friday at 7 PM",
+      description: "Explore the vibrant life at Bendre PU College through our photo gallery",
       image: "/highlight.jpeg",
       link: "/student-life/radio-show"
     },
     {
       title: "Student Radio Show",
-      description: "Tune in to our weekly student-run radio show every Friday at 7 PM",
+      description: "Explore the vibrant life at Bendre PU College through our photo gallery",
       image: "/highlight.jpeg",
       link: "/student-life/radio-show"
     }

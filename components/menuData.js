@@ -27,9 +27,9 @@ export const topLevelItems = [
           {
             heading: 'CAMPUS LIFE',
             items: [
-              { name: 'Housing', path: '#' },
-              { name: 'Dining', path: '#' },
-              { name: 'Student Organizations', path: '#' },
+              { name: 'Hostel', path: '#' },
+              { name: 'Library', path: '#' },
+              { name: 'Clasrooms', path: '#' },
             ]
           },
           {
@@ -37,7 +37,7 @@ export const topLevelItems = [
             items: [
               { name: 'Libraries', path: '#' },
               { name: 'Sports Center', path: '#' },
-              { name: 'Student Center', path: '#' },
+              { name: 'Scholorship', path: '#' },
             ]
           }
         ]
@@ -48,7 +48,7 @@ export const topLevelItems = [
           {
             heading: 'TECHNOLOGY',
             items: [
-              { name: 'Media Hub', path: '#' },
+              { name: 'Modern Library', path: '#' },
               { name: 'Tech Services', path: '#' },
             ]
           },
@@ -59,71 +59,7 @@ export const topLevelItems = [
               { name: 'Register for Classes', path: '#' },
             ]
           },
-          {
-            heading: 'ACCOUNTS',
-            items: [
-              { name: 'Student Accounts', path: '#' },
-              { name: 'Financial Aid', path: '#' },
-            ]
-          },
-          {
-            heading: 'HEALTH & SAFETY',
-            items: [
-              { name: 'Wellness', path: '#' },
-              { name: 'Campus Safety', path: '#' },
-            ]
-          },
-          {
-            heading: 'ADDITIONAL RESOURCES',
-            items: [
-              { name: 'Resources for Parents', path: '#' },
-              { name: 'All Student Resources', path: '#' },
-              { name: 'Internal Event Brand Guide', path: '#' },
-            ]
-          },
-        ]
-      },
-      {
-        name: 'ABILITIES',
-        submenu: [
-          {
-            heading: 'CAREER SERVICES',
-            items: [
-              { name: 'Career Counseling', path: '#' },
-              { name: 'Job Search', path: '#' },
-              { name: 'Internships', path: '#' },
-            ]
-          },
-          {
-            heading: 'SKILLS DEVELOPMENT',
-            items: [
-              { name: 'Workshops', path: '#' },
-              { name: 'Online Courses', path: '#' },
-              { name: 'Mentorship Programs', path: '#' },
-            ]
-          }
-        ]
-      },
-      {
-        name: 'IGNITERS',
-        submenu: [
-          {
-            heading: 'RESEARCH',
-            items: [
-              { name: 'Research Centers', path: '#' },
-              { name: 'Faculty Research', path: '#' },
-              { name: 'Student Research', path: '#' },
-            ]
-          },
-          {
-            heading: 'INNOVATION',
-            items: [
-              { name: 'Entrepreneurship', path: '#' },
-              { name: 'Incubator Programs', path: '#' },
-              { name: 'Partnerships', path: '#' },
-            ]
-          }
+
         ]
       }
-    // ... (include the rest of the menu items here)
   ];

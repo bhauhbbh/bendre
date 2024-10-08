@@ -2,7 +2,7 @@
   <div class="college-homepage">
     <Header />
     <Hero />
-    <CollegeOverview />
+    <!-- <CollegeOverview /> -->
     <MissionVision />
     <Facilities />
     <Achievements />

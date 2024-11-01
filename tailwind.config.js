@@ -8,11 +8,12 @@ export default {
         nunito: ['Nunito Sans', 'sans-serif'],
       },
       colors: {
-        'custom-maroon': '#881125',
-        'custom-maroon-dark': '#6A0D1E',
+        'custom-maroon': '#38bdf8',
+        'custom-maroon-dark': '#3b82f6',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
-

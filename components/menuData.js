@@ -27,7 +27,7 @@ export const topLevelItems = [
           {
             heading: 'CAMPUS LIFE',
             items: [
-              { name: 'Hostel', path: '#' },
+              { name: 'Hostel', path: '/hostel' },
               { name: 'Library', path: '#' },
               { name: 'Clasrooms', path: '#' },
             ]

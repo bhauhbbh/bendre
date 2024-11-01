@@ -1,42 +1,35 @@
 <template>
-    <div>
-      <Header />
-      <component :is="pageComponent" v-bind="pageData" />
-      <Footer />
-    </div>
-  </template>
-  
-  <script setup>
-  import { ref, computed } from 'vue'
-  import { useRoute } from 'vue-router'
-  import { usePageStore } from '~/store/page'
-  
-  // Import page components
-  import AcademicsPage from '~/components/pages/AcademicsPage.vue'
-  import StudentLifePage from '~/components/pages/StudentLifePage.vue'
-  import AdmissionsPage from '~/components/pages/AdmissionsPage.vue'
-  
-  const route = useRoute()
-  const pageStore = usePageStore()
-  
-  const slug = computed(() => route.params.slug)
-  const pageData = ref(null)
-  
-  // Map slugs to components
-  const pageComponents = {
-    academics: AcademicsPage,
-    'student-life': StudentLifePage,
-    admissions: AdmissionsPage,
+  <component :is="pageComponent" :pageData="pageData" />
+</template>
+
+<script setup>
+import { ref, computed, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+import { usePageStore } from '~/store/page'
+import DynamicPage from '~/components/DynamicPage.vue'
+import HostelPage from '~/components/HostelPage.vue'
+
+const route = useRoute()
+const pageStore = usePageStore()
+
+const slug = computed(() => route.params.slug)
+const pageData = ref(null)
+
+// Determine which component to render
+const pageComponent = computed(() => {
+  switch (slug.value) {
+    case 'hostel':
+      return HostelPage
+    default:
+      return DynamicPage
   }
-  
-  // Fetch page data based on slug
-  const fetchPageData = async () => {
-    pageData.value = await pageStore.getPageData(slug.value)
-  }
-  
-  // Determine which component to render
-  const pageComponent = computed(() => pageComponents[slug.value] || null)
-  
-  // Fetch data when component is created
-  fetchPageData()
-  </script>
+})
+
+// Fetch page data based on slug
+const fetchPageData = async () => {
+  pageData.value = await pageStore.getPageData(slug.value)
+}
+
+// Fetch data when component is mounted
+onMounted(fetchPageData)
+</script>

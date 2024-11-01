@@ -3,9 +3,9 @@
   <nav class="relative bg-white border-b-2 border-gray-200 text-gray-900 font-nunito hidden md:block">
     <div class="container mx-auto">
       <ul class="flex justify-center">
-        <li v-for="item in topLevelItems" :key="item.name" class="hoverable group">
+        <li v-for="item in topLevelItems" :key="item.label" class="hoverable group">
           <a href="#" class="relative block py-6 px-4 lg:p-6 text-lg lg:text-base font-semibold hover:bg-gray-100 flex items-center">
-            {{ item.name }}
+            {{ item.label }}
             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
             </svg>
@@ -17,8 +17,8 @@
                   <div v-for="(column, index) in item.submenu" :key="index" class="px-4">
                     <h3 class="font-semibold text-lg mb-3 text-black uppercase">{{ column.heading }}</h3>
                     <ul class="text-left">
-                      <li v-for="subItem in column.items" :key="subItem.name" class="mb-2">
-                        <a :href="subItem.path" class="text-custom-maroon hover:underline text-lg font-normal">{{ subItem.name }}</a>
+                      <li v-for="subItem in column.items" :key="subItem.label" class="mb-2">
+                        <a :href="subItem.path" class="text-custom-maroon hover:underline text-lg font-normal">{{ subItem.label }}</a>
                       </li>
                     </ul>
                   </div>

@@ -4,6 +4,18 @@ import { defineStore } from 'pinia'
 export const usePageStore = defineStore('page', {
   state: () => ({
     pageData: {
+      about: {
+        title: 'About Bendre PU College',
+        content: `
+          <h2>Excellence in Education</h2>
+          <p>At Bendre PU College, we are committed to providing exceptional educational experiences that prepare students for success in their academic and professional lives.</p>
+          <h3>Our Legacy</h3>
+          <p>Founded in 1980, our institution has grown to become a leading center of learning, known for its academic excellence and holistic approach to education.</p>
+          <h3>Our Commitment</h3>
+          <p>We are dedicated to nurturing young minds, fostering creativity, and building character through a combination of rigorous academic programs and enriching extracurricular activities.</p>
+        `,
+        image: '/bendre_.jpg'
+      },
       academics: {
         title: 'Academic Programs',
         content: `

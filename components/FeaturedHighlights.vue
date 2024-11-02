@@ -27,24 +27,7 @@
       image: "/highlight.jpeg",
       link: "/gallery"
     },
-    {
-      title: "Disability Employment Awareness Month",
-      description: "Explore the vibrant life at Bendre PU College through our photo gallery",
-      image: "/highlight.jpeg",
-      link: "/events/disability-awareness"
-    },
-    {
-      title: "Student Radio Show",
-      description: "Explore the vibrant life at Bendre PU College through our photo gallery",
-      image: "/highlight.jpeg",
-      link: "/student-life/radio-show"
-    },
-    {
-      title: "Student Radio Show",
-      description: "Explore the vibrant life at Bendre PU College through our photo gallery",
-      image: "/highlight.jpeg",
-      link: "/student-life/radio-show"
-    }
+
   ]
   </script>
   

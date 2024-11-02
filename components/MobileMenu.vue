@@ -14,7 +14,7 @@
       <div class="overflow-y-auto h-[calc(100vh-64px)]">
         <ul class="py-2">
           <li v-for="item in topLevelItems" :key="item.label" class="border-b border-gray-200 last:border-b-0">
-            <div
+            <div v-if="item.submenu"
               @click="toggleSubmenu(item.label)"
               class="flex justify-between items-center px-4 py-3 cursor-pointer hover:bg-gray-50"
             >
@@ -29,7 +29,16 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
             </div>
+            <a v-else
+              :href="item.externalLink"
+              :target="item.externalLink ? '_blank' : '_self'"
+              class="block px-4 py-3 text-lg font-semibold hover:bg-gray-50"
+              @click="$emit('close-menu')"
+            >
+              {{ item.label }}
+            </a>
             <transition
+              v-if="item.submenu"
               enter-active-class="transition-all duration-300 ease-out"
               enter-from-class="opacity-0 max-h-0"
               enter-to-class="opacity-100 max-h-[1000px]"

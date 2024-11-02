@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "@heroicons/vue": "^2.1.5",
+    "@nuxtjs/robots": "^4.1.10",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@pinia/nuxt": "^0.5.5",
     "@tailwindcss/typography": "^0.5.15",
     "nuxt": "^3.13.0",
+    "nuxt-simple-sitemap": "^4.4.1",
     "pinia": "^2.2.4",
     "vue": "latest",
     "vue-router": "latest"

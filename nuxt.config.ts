@@ -13,5 +13,23 @@ export default defineNuxtConfig({
       ]
     },
     layoutTransition: { name: 'layout', mode: 'out-in' }
-  }
+  },
+   // Add error handling configuration
+   nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/'],
+      ignore: []
+    }
+  },
+
+  // Add route rules
+  routeRules: {
+    // Handle non-existing routes
+    '/**': { prerender: false }
+  },
+  experimental: {
+    payloadExtraction: false
+  },
+  
 })

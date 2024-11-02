@@ -4,13 +4,17 @@
     <div class="container mx-auto">
       <ul class="flex justify-center">
         <li v-for="item in topLevelItems" :key="item.label" class="hoverable group">
-          <a href="#" class="relative block py-6 px-4 lg:p-6 text-lg lg:text-base font-semibold hover:bg-gray-100 flex items-center">
+          <a 
+            :href="item.externalLink || '#'" 
+            :target="item.externalLink ? '_blank' : '_self'"
+            class="relative block py-6 px-4 lg:p-6 text-lg lg:text-base font-semibold hover:bg-gray-100 flex items-center"
+          >
             {{ item.label }}
-            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg v-if="item.submenu" class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
             </svg>
           </a>
-          <div class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-white">
+          <div v-if="item.submenu" class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-white">
             <div class="container mx-auto">
               <div class="flex justify-center">
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl">

@@ -9,6 +9,11 @@ import { usePageStore } from '~/store/page'
 import DynamicPage from '~/components/DynamicPage.vue'
 import HostelPage from '~/components/HostelPage.vue'
 
+// Define unique page meta
+definePageMeta({
+  name: 'single-slug-page'
+})
+
 const route = useRoute()
 const pageStore = usePageStore()
 

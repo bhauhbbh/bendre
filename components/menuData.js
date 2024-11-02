@@ -180,5 +180,9 @@ export const topLevelItems = [
           ]
         }
       ]
-  }
+  },
+  {
+    label: 'LOGIN',
+    externalLink: 'https://login.bendrepucollege.com'
+}
 ];
